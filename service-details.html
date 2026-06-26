@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details | SupplyPro Sourcing Advisory</title>
+  <meta name="description" content="Technical breakdowns, operational workflows, and commercial details of SupplyPro's procurement optimization solutions.">
+  
+  <!-- CDNs: Bootstrap 5, FontAwesome, GSAP -->
+  <link id="bootstrapLink" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      const isRtl = localStorage.getItem('rtl') === 'true';
+      if (isRtl) {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.getElementById('bootstrapLink').href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .service-nav-item {
+      cursor: pointer;
+      padding: 15px 20px;
+      border-left: 3px solid var(--border-color);
+      transition: var(--transition-smooth);
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+    .service-nav-item.active {
+      border-left-color: var(--accent-blue);
+      color: var(--text-primary);
+      background-color: var(--bg-secondary);
+    }
+    .service-nav-item:hover {
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Cursor Overlay -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Premium Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-custom" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          SupplyPro
+          
+        </a>
+        
+        <div class="d-flex align-items-center d-lg-none">
+          <button class="theme-toggle-btn me-2" id="themeToggleMobile" aria-label="Toggle Light/Dark Theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <button class="rtl-toggle-btn me-2" id="rtlToggleMobile" aria-label="Toggle RTL/LTR Direction">
+            <i class="fas fa-right-left"></i>
+          </button>
+          <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-center" id="desktopNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-alternative.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-none d-lg-flex align-items-center">
+          <button class="theme-toggle-btn me-2" id="themeToggle" aria-label="Toggle Light/Dark Theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <button class="rtl-toggle-btn me-3" id="rtlToggle" aria-label="Toggle RTL/LTR Direction">
+            <i class="fas fa-right-left"></i>
+          </button>
+          <a href="booking.html" class="btn btn-premium btn-premium-primary">BOOK NOW</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title" id="mobileMenuLabel" style="font-family: var(--font-heading);">Navigation</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-alternative.html">Home 2</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Profile</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact Info</a></li>
+      </ul>
+      <div class="mt-5">
+        <a href="booking.html" class="btn btn-premium btn-premium-primary w-100 mb-3">BOOK NOW</a>
+        <a href="assets/Marcus_Vance_Profile.pdf" download class="btn btn-premium btn-premium-secondary w-100"><i class="fas fa-download me-2"></i>Download Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inner Page Banner -->
+  <section class="section-padding position-relative overflow-hidden d-flex align-items-center" style="background: linear-gradient(rgba(10, 15, 26, 0.85), rgba(10, 15, 26, 0.85)), url('https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat; padding-top: 160px; padding-bottom: 80px; border-bottom: 1px solid var(--border-color);">
+    <div class="container reveal-up position-relative z-1 text-center">
+      <span class="section-subtitle">Operational Deep Dive</span>
+      <h1 class="display-4 fw-bold text-white">Service Blueprints</h1>
+      <p class="text-secondary-custom lead mb-0 mx-auto" style="max-width: 700px;">Detailed operational processes, deliverables, and commercial outcomes for each consulting methodology.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Service Details Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Left Side Navigation -->
+        <div class="col-lg-3 mb-5 mb-lg-0 reveal-up">
+          <div class="sticky-top" style="top: 100px;">
+            <h4 class="h5 mb-4 text-gradient-blue fw-bold">Core Capabilities</h4>
+            <div class="d-flex flex-column gap-2 border-start border-secondary">
+              <a href="#procurement" class="service-nav-item text-decoration-none active" id="nav-procurement">Procurement Strategy</a>
+              <a href="#audit" class="service-nav-item text-decoration-none" id="nav-audit">Supplier Audit Services</a>
+              <a href="#cost" class="service-nav-item text-decoration-none" id="nav-cost">Cost Reduction Analysis</a>
+              <a href="#vendor" class="service-nav-item text-decoration-none" id="nav-vendor">Vendor Management</a>
+              <a href="#optimization" class="service-nav-item text-decoration-none" id="nav-optimization">Supply Chain Optimization</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Service Breakdown Content -->
+        <div class="col-lg-9 ps-lg-5 reveal-up">
+          
+          <!-- Procurement Strategy Content -->
+          <div class="service-detail-section active-section mb-5" id="procurement">
+            <h2 class="h3 mb-4" style="font-family: var(--font-heading);">Procurement Strategy</h2>
+            <p class="text-secondary-custom">This engagement builds robust direct and indirect sourcing models that insulate companies from logistics fluctuations and pricing increases. I evaluate vendor concentration to eliminate single-point-of-failure risks.</p>
+            
+            <h4 class="h5 mt-4 mb-3">Sourcing Process:</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 1: Category Mapping</h5>
+                  <p class="text-secondary-custom small mb-0">Auditing and categorizing your historic purchasing data to highlight high-spend components.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 2: Supplier Mapping</h5>
+                  <p class="text-secondary-custom small mb-0">Identifying fallback global vendors to diversify raw materials sourcing paths.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center rounded border border-secondary p-4 mt-4" style="background-color: var(--bg-secondary);">
+              <h5 class="h6 mb-3 text-gradient-blue">Procurement Optimization Strategy</h5>
+              <a href="booking.html" class="btn btn-premium btn-premium-primary">Book Procurement Strategy Call</a>
+            </div>
+          </div>
+
+          <hr class="border-secondary my-5">
+
+          <!-- Supplier Audit Services Content -->
+          <div class="service-detail-section mb-5" id="audit">
+            <h2 class="h3 mb-4" style="font-family: var(--font-heading);">Supplier Audit Services</h2>
+            <p class="text-secondary-custom">I conduct independent audits directly on manufacturing facilities globally. I verify production capacities, examine internal quality inspection steps, check ISO compliance, and evaluate geopolitical exposure.</p>
+            
+            <h4 class="h5 mt-4 mb-3">Audit Process:</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 1: QA Evaluation</h5>
+                  <p class="text-secondary-custom small mb-0">Validating on-site testing procedures to verify compliance with engineering blueprints.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 2: Capacity Verification</h5>
+                  <p class="text-secondary-custom small mb-0">Analyzing factory floor machinery utilization to ensure supplier can meet seasonal demand spikes.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center rounded border border-secondary p-4 mt-4" style="background-color: var(--bg-secondary);">
+              <h5 class="h6 mb-3 text-gradient-blue">Schedule On-site Supplier Auditing</h5>
+              <a href="booking.html" class="btn btn-premium btn-premium-primary">Book Supplier Audit Consultation</a>
+            </div>
+          </div>
+
+          <hr class="border-secondary my-5">
+
+          <!-- Cost Reduction Analysis Content -->
+          <div class="service-detail-section mb-5" id="cost">
+            <h2 class="h3 mb-4" style="font-family: var(--font-heading);">Cost Reduction Analysis</h2>
+            <p class="text-secondary-custom">This analysis conducts direct bottom-up costing. I look past supplier catalog pricing to evaluate raw material indices, processing tariffs, and packaging costs, allowing clients to enter negotiations with empirical data.</p>
+            
+            <h4 class="h5 mt-4 mb-3">Analysis Process:</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 1: Component Costing</h5>
+                  <p class="text-secondary-custom small mb-0">Breaking down the build pricing structure of your products to outline raw material margins.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 2: Negotiation Playbooks</h5>
+                  <p class="text-secondary-custom small mb-0">Drafting technical counter-proposals to reduce supplier margins with data indicators.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center rounded border border-secondary p-4 mt-4" style="background-color: var(--bg-secondary);">
+              <h5 class="h6 mb-3 text-gradient-blue">Initiate Cost Reduction Diagnostics</h5>
+              <a href="booking.html" class="btn btn-premium btn-premium-primary">Book Spend Assessment</a>
+            </div>
+          </div>
+
+          <hr class="border-secondary my-5">
+
+          <!-- Vendor Management Content -->
+          <div class="service-detail-section mb-5" id="vendor">
+            <h2 class="h3 mb-4" style="font-family: var(--font-heading);">Vendor Management</h2>
+            <p class="text-secondary-custom">Transitioning key supplier relationships into KPI-driven frameworks. I design service level agreements (SLAs) with built-in penalties and incentive structures that align with delivery performance goals.</p>
+            
+            <h4 class="h5 mt-4 mb-3">Vendor Process:</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 1: SLA Modeling</h5>
+                  <p class="text-secondary-custom small mb-0">Drafting clear service and quality frameworks to enforce operational expectations.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 2: Performance Tracking</h5>
+                  <p class="text-secondary-custom small mb-0">Deploying scorecards that rank supplier performance across quality, cost, and logistics.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center rounded border border-secondary p-4 mt-4" style="background-color: var(--bg-secondary);">
+              <h5 class="h6 mb-3 text-gradient-blue">Deploy Performance Scorecard Frameworks</h5>
+              <a href="booking.html" class="btn btn-premium btn-premium-primary">Schedule Vendor Assessment</a>
+            </div>
+          </div>
+
+          <hr class="border-secondary my-5">
+
+          <!-- Supply Chain Optimization Content -->
+          <div class="service-detail-section mb-5" id="optimization">
+            <h2 class="h3 mb-4" style="font-family: var(--font-heading);">Supply Chain Optimization</h2>
+            <p class="text-secondary-custom">I review shipping routes, custom tariffs, freight carrier configurations, and inventory storage buffers. The objective is to minimize inventory carrying costs without risking delivery bottlenecks.</p>
+            
+            <h4 class="h5 mt-4 mb-3">Optimization Process:</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 1: Inventory Calculations</h5>
+                  <p class="text-secondary-custom small mb-0">Using statistical models to define optimal safety stock limits for every regional warehouse.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-premium p-3">
+                  <h5 class="h6 mb-2">Phase 2: Freight Carrier Reviews</h5>
+                  <p class="text-secondary-custom small mb-0">Restructuring carrier RFQs to consolidate volume discounts and reduce transport rates.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center rounded border border-secondary p-4 mt-4" style="background-color: var(--bg-secondary);">
+              <h5 class="h6 mb-3 text-gradient-blue">Audit Logistics and Warehousing</h5>
+              <a href="booking.html" class="btn btn-premium btn-premium-primary">Schedule Logistics Audit</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive JavaScript to link sidebar highlighting to hashes -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.service-nav-item');
+      
+      const highlightLink = () => {
+        const hash = window.location.hash || '#procurement';
+        links.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === hash) {
+            link.classList.add('active');
+          }
+        });
+      };
+
+      window.addEventListener('hashchange', highlightLink);
+      highlightLink(); // initial load
+    });
+  </script>
+
+  <!-- Premium Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-custom mb-3 d-inline-block text-white" href="index.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            SupplyPro
+          </a>
+          <p class="text-secondary-custom mb-4" style="font-size: 0.9rem;">Helping manufacturing and retail businesses reduce procurement costs, improve supplier performance, and create smarter supply chain strategies.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-secondary-custom" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="#" class="text-secondary-custom" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-secondary-custom" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="h6 text-uppercase fw-bold mb-3" style="color: var(--text-primary); font-family: var(--font-body); letter-spacing: 0.05em;">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Home</a></li>
+            <li class="mb-2"><a href="about.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">About</a></li>
+            <li class="mb-2"><a href="services.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Services</a></li>
+            <li class="mb-2"><a href="gallery.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="h6 text-uppercase fw-bold mb-3" style="color: var(--text-primary); font-family: var(--font-body); letter-spacing: 0.05em;">Resources</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="blog.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Insights</a></li>
+            <li class="mb-2"><a href="coming-soon.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Publications & Guides</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Book Appointment</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="h6 text-uppercase fw-bold mb-3" style="color: var(--text-primary); font-family: var(--font-body); letter-spacing: 0.05em;">Newsletter Insights</h4>
+          <p class="text-secondary-custom mb-3" style="font-size: 0.85rem;">Subscribe to receive quarterly insights on freight volatility, sourcing strategies, and cost-reduction tactics.</p>
+          <form class="needs-validation-custom" novalidate>
+            <div class="input-group">
+              <input type="email" class="form-control footer-input-custom" placeholder="Professional Email" aria-label="Professional Email" required>
+              <button class="btn btn-premium btn-premium-primary" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="border-secondary mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <span style="font-size: 0.85rem;" class="text-secondary-custom">&copy; 2026 SupplyPro. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="coming-soon.html" class="text-secondary-custom text-decoration-none me-3" style="font-size: 0.85rem;">Privacy Policy</a>
+          <a href="coming-soon.html" class="text-secondary-custom text-decoration-none me-3" style="font-size: 0.85rem;">Terms & Conditions</a>
+          <button class="btn btn-sm btn-outline-secondary p-2" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Bootstrap, GSAP, Custom scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

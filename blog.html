@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procurement & Logistics Insights | SupplyPro</title>
+  <meta name="description" content="Strategic research, publications, and whitepapers on supply chain resilience, tariff impacts, and cost reduction.">
+  
+  <!-- CDNs: Bootstrap 5, FontAwesome, GSAP -->
+  <link id="bootstrapLink" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      const isRtl = localStorage.getItem('rtl') === 'true';
+      if (isRtl) {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.getElementById('bootstrapLink').href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Overlay -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Premium Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-custom" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          SupplyPro
+          
+        </a>
+        
+        <div class="d-flex align-items-center d-lg-none">
+          <button class="theme-toggle-btn me-2" id="themeToggleMobile" aria-label="Toggle Light/Dark Theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <button class="rtl-toggle-btn me-2" id="rtlToggleMobile" aria-label="Toggle RTL/LTR Direction">
+            <i class="fas fa-right-left"></i>
+          </button>
+          <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-center" id="desktopNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-alternative.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom active" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-none d-lg-flex align-items-center">
+          <button class="theme-toggle-btn me-2" id="themeToggle" aria-label="Toggle Light/Dark Theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <button class="rtl-toggle-btn me-3" id="rtlToggle" aria-label="Toggle RTL/LTR Direction">
+            <i class="fas fa-right-left"></i>
+          </button>
+          <a href="booking.html" class="btn btn-premium btn-premium-primary">BOOK NOW</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title" id="mobileMenuLabel" style="font-family: var(--font-heading);">Navigation</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-alternative.html">Home 2</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Profile</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom active" href="blog.html">Insights</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Info</a></li>
+      </ul>
+      <div class="mt-5">
+        <a href="booking.html" class="btn btn-premium btn-premium-primary w-100 mb-3">BOOK NOW</a>
+        <a href="assets/Marcus_Vance_Profile.pdf" download class="btn btn-premium btn-premium-secondary w-100"><i class="fas fa-download me-2"></i>Download Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inner Page Banner -->
+  <section class="section-padding position-relative overflow-hidden d-flex align-items-center" style="background-color: var(--bg-secondary); padding-top: 160px; padding-bottom: 80px; border-bottom: 1px solid var(--border-color);">
+    <div class="container reveal-up text-center">
+      <span class="section-subtitle">Thought Leadership</span>
+      <h1 class="display-4 fw-bold">Consulting Insights</h1>
+      <p class="text-secondary-custom lead mb-0 mx-auto" style="max-width: 700px;">Practical briefs, market updates, and tactical methods for directors of sourcing and supply chain.</p>
+    </div>
+  </section>
+
+  <!-- Blog Listing Section -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Section 1: Supply Chain Articles -->
+      <div class="mb-5 reveal-up">
+        <div class="text-center mb-4 border-bottom pb-3 border-secondary">
+          <h2 class="h3 mb-2" style="font-family: var(--font-heading); color: var(--text-primary);"><i class="fas fa-link me-2 text-gradient-blue"></i>Supply Chain Articles</h2>
+          <span class="badge bg-transparent border border-secondary text-secondary-custom">2 Publications</span>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Blog Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80&w=600" alt="Resilient Global Supply Chains" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">Resiliency</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>April 08, 2026</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">Building a Resilient Supply Chain</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">How manufacturers protect assembly margins from ocean freight bottlenecks, tariff shifts, and supplier compliance delays.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=600" alt="Global logistics terminal" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">Logistics</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>March 12, 2026</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">Optimizing Global Cargo Corridors</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">Analyzing cross-border freight challenges, route consolidation models, and duty reduction compliance protocols.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Procurement Tips -->
+      <div class="mb-5 mt-5 reveal-up">
+        <div class="text-center mb-4 border-bottom pb-3 border-secondary">
+          <h2 class="h3 mb-2" style="font-family: var(--font-heading); color: var(--text-primary);"><i class="fas fa-piggy-bank me-2 text-gradient-blue"></i>Procurement Tips</h2>
+          <span class="badge bg-transparent border border-secondary text-secondary-custom">2 Publications</span>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Blog Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=600" alt="Procurement Cost Calculation Papers" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">Cost Reduction</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>June 24, 2026</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">5 Ways Companies Reduce Procurement Costs</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">A detailed examination of vendor consolidation techniques, raw materials index pricing, and logistics contract negotiation guidelines.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600" alt="Supplier contract negotiation" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">Sourcing</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>February 18, 2026</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">7 Negotiating Tactics for Supplier Contracts</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">Mastering volume commitments, service level penalties, and price index triggers to lock in competitive pricing.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Industry Knowledge -->
+      <div class="mb-5 mt-5 reveal-up">
+        <div class="text-center mb-4 border-bottom pb-3 border-secondary">
+          <h2 class="h3 mb-2" style="font-family: var(--font-heading); color: var(--text-primary);"><i class="fas fa-brain me-2 text-gradient-blue"></i>Industry Knowledge</h2>
+          <span class="badge bg-transparent border border-secondary text-secondary-custom">2 Publications</span>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Blog Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" alt="Empirical Cost Modeling" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">Cost Analysis</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>January 10, 2026</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">Empirical Should-Cost Calculations</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">How sourcing teams build bottom-up cost calculations using raw material indexes, factory utility metrics, and assembly labor variables.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600" alt="Material index pricing charts" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">Index Pricing</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>December 05, 2025</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">Understanding Material Index Pricing</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">A technical breakdown of commodity hedging, price escalation indices, and margin protection frameworks.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4: Business Strategies -->
+      <div class="mt-5 reveal-up">
+        <div class="text-center mb-4 border-bottom pb-3 border-secondary">
+          <h2 class="h3 mb-2" style="font-family: var(--font-heading); color: var(--text-primary);"><i class="fas fa-chess-knight me-2 text-gradient-blue"></i>Business Strategies</h2>
+          <span class="badge bg-transparent border border-secondary text-secondary-custom">2 Publications</span>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Blog Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" alt="Quality supplier checklists" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">Supplier Audits</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>May 15, 2026</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">How Supplier Audits Improve Business Performance</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">Operational standards for manufacturing plant evaluations, capacity validation calculations, and structural risk identification.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="case-study-card h-100 d-flex flex-column">
+              <div class="case-study-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600" alt="Sustainable supply chain" class="case-study-img">
+                <div class="case-study-overlay">
+                  <span class="case-study-tag">ESG Sourcing</span>
+                </div>
+              </div>
+              <div class="case-study-info d-flex flex-column flex-grow-1 text-center">
+                <span class="text-secondary-custom small mb-2"><i class="far fa-calendar me-2"></i>November 14, 2025</span>
+                <h3 class="h4 mb-3" style="font-family: var(--font-heading);">Aligning Sourcing with Corporate ESG Goals</h3>
+                <p class="text-secondary-custom small mb-4 flex-grow-1">Integrating carbon footprint validation, ethical audit certifications, and localized sourcing plans without hurting profitability.</p>
+                <a href="blog-details.html" class="btn btn-premium btn-premium-secondary mt-auto w-100">Read Publication</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-custom mb-3 d-inline-block text-white" href="index.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            SupplyPro
+          </a>
+          <p class="text-secondary-custom mb-4" style="font-size: 0.9rem;">Helping manufacturing and retail businesses reduce procurement costs, improve supplier performance, and create smarter supply chain strategies.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-secondary-custom" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="#" class="text-secondary-custom" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-secondary-custom" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="h6 text-uppercase fw-bold mb-3" style="color: var(--text-primary); font-family: var(--font-body); letter-spacing: 0.05em;">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Home</a></li>
+            <li class="mb-2"><a href="about.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">About</a></li>
+            <li class="mb-2"><a href="services.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Services</a></li>
+            <li class="mb-2"><a href="gallery.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="h6 text-uppercase fw-bold mb-3" style="color: var(--text-primary); font-family: var(--font-body); letter-spacing: 0.05em;">Resources</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="blog.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Insights</a></li>
+            <li class="mb-2"><a href="coming-soon.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Publications & Guides</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Book Appointment</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-secondary-custom text-decoration-none" style="font-size: 0.9rem;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="h6 text-uppercase fw-bold mb-3" style="color: var(--text-primary); font-family: var(--font-body); letter-spacing: 0.05em;">Newsletter Insights</h4>
+          <p class="text-secondary-custom mb-3" style="font-size: 0.85rem;">Subscribe to receive quarterly insights on freight volatility, sourcing strategies, and cost-reduction tactics.</p>
+          <form class="needs-validation-custom" novalidate>
+            <div class="input-group">
+              <input type="email" class="form-control footer-input-custom" placeholder="Professional Email" aria-label="Professional Email" required>
+              <button class="btn btn-premium btn-premium-primary" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="border-secondary mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <span style="font-size: 0.85rem;" class="text-secondary-custom">&copy; 2026 SupplyPro. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="coming-soon.html" class="text-secondary-custom text-decoration-none me-3" style="font-size: 0.85rem;">Privacy Policy</a>
+          <a href="coming-soon.html" class="text-secondary-custom text-decoration-none me-3" style="font-size: 0.85rem;">Terms & Conditions</a>
+          <button class="btn btn-sm btn-outline-secondary p-2" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Bootstrap, GSAP, Custom scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>
