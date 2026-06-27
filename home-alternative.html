@@ -50,7 +50,7 @@
 
   <!-- Premium Header -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
       <div class="container">
         <a class="navbar-brand navbar-brand-custom" href="index.html">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
@@ -62,14 +62,14 @@
           
         </a>
         
-        <div class="d-flex align-items-center d-lg-none">
+        <div class="d-flex align-items-center d-xl-none">
           <button class="theme-toggle-btn me-2" id="themeToggleMobile" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
           <button class="rtl-toggle-btn me-2" id="rtlToggleMobile" aria-label="Toggle RTL/LTR Direction">
             <i class="fas fa-right-left"></i>
           </button>
-          <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
             <i class="fas fa-bars fa-lg"></i>
           </button>
         </div>
@@ -77,10 +77,10 @@
         <div class="collapse navbar-collapse justify-content-center" id="desktopNavbar">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link nav-link-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+              <a class="nav-link nav-link-custom active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
               <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                <li><a class="dropdown-item" href="home-alternative.html">Home 2</a></li>
+                <li><a class="dropdown-item active" href="home-alternative.html">Home 2</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
@@ -91,7 +91,7 @@
           </ul>
         </div>
 
-        <div class="d-none d-lg-flex align-items-center">
+        <div class="d-none d-xl-flex align-items-center">
           <button class="theme-toggle-btn me-2" id="themeToggle" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
@@ -111,18 +111,22 @@
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="home-alternative.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Profile</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Info</a></li>
-      </ul>
+      <ul class="navbar-nav text-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item active" href="home-alternative.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
       <div class="mt-5">
         <a href="booking.html" class="btn btn-premium btn-premium-primary w-100 mb-3">BOOK NOW</a>
-        <a href="assets/Marcus_Vance_Profile.pdf" download class="btn btn-premium btn-premium-secondary w-100"><i class="fas fa-download me-2"></i>Download Profile</a>
       </div>
     </div>
   </div>
@@ -135,7 +139,7 @@
     </div>
     <div class="container hero-content-wrapper py-5">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-up text-center text-lg-start">
           <span class="section-subtitle">Luxury Consulting Brand</span>
           <h1 class="display-3 fw-bold mb-4" style="line-height: 1.1;">
             Turning Procurement Challenges <br>Into <span class="text-gradient-blue">Strategic Advantages</span>
@@ -143,29 +147,29 @@
           <p class="lead text-secondary-custom mb-5">
             Data-driven supply chain consulting for companies seeking smarter sourcing, stronger suppliers, and measurable savings.
           </p>
-          <div class="d-flex flex-sm-row flex-column gap-3">
+          <div class="d-flex flex-sm-row flex-column gap-3 justify-content-center justify-content-lg-start align-items-center">
             <a href="#diagnostic-booking" class="btn btn-premium btn-premium-primary px-4 py-3">Start Consultation</a>
             <a href="#expertise-showcase" class="btn btn-premium btn-premium-secondary px-4 py-3">Explore Results</a>
           </div>
         </div>
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-up d-flex justify-content-center">
           <!-- Consultant Profile Image with Floating Data Elements -->
           <div class="hero-image-wrapper text-center">
             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="Marcus Vance - SupplyPro Consultant" class="consultant-image-premium img-fluid">
             <!-- Floating Data Elements -->
-            <div class="floating-card floating-card-1">
+            <div class="floating-card floating-card-1 d-none d-lg-block">
               <div class="d-flex align-items-center gap-2">
                 <div class="rounded-circle bg-success" style="width: 10px; height: 10px;"></div>
                 <span class="small fw-bold">Spend Analysis: Active</span>
               </div>
             </div>
-            <div class="floating-card floating-card-2">
+            <div class="floating-card floating-card-2 d-none d-lg-block">
               <div class="d-flex align-items-center gap-2">
                 <i class="fas fa-chart-line text-info"></i>
                 <span class="small fw-bold">Savings: +18.4%</span>
               </div>
             </div>
-            <div class="floating-card floating-card-3">
+            <div class="floating-card floating-card-3 d-none d-lg-block">
               <div class="d-flex align-items-center gap-2">
                 <i class="fas fa-shield-halved text-warning"></i>
                 <span class="small fw-bold">Risk Auditing</span>
@@ -181,13 +185,13 @@
   <section class="section-padding bg-secondary-section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
     <div class="container">
       <div class="row align-items-center g-5 reveal-up">
-        <div class="col-lg-6">
+        <div class="col-lg-6 text-center text-lg-start">
           <span class="section-subtitle text-uppercase">Smarter Analytics</span>
           <h2 class="section-title">Every Cost Has A Story.<br>Every Supplier Has An Opportunity.</h2>
           <p class="text-secondary-custom mb-4">
             Through data visualization and spend analytics, we help retail and manufacturing organizations locate cost variance, manage supply risk, and streamline supplier engagement pipelines.
           </p>
-          <div class="d-flex gap-3 mb-4">
+          <div class="d-flex gap-3 mb-4 justify-content-center justify-content-lg-start">
             <div class="d-flex align-items-center gap-2">
               <i class="fas fa-check-circle" style="color: var(--accent-teal);"></i>
               <span class="small fw-bold">Enterprise Spend Visibility</span>
@@ -242,11 +246,11 @@
   <section id="expertise-showcase" class="section-padding" style="background-color: var(--bg-primary);">
     <div class="container">
       <div class="row mb-5 reveal-up">
-        <div class="col-lg-6">
+        <div class="col-lg-6 text-center text-lg-start">
           <span class="section-subtitle">Core Capabilities</span>
           <h2 class="section-title">Strategic Sourcing Advisory</h2>
         </div>
-        <div class="col-lg-6 d-flex align-items-end justify-content-lg-end">
+        <div class="col-lg-6 d-flex align-items-end justify-content-center justify-content-lg-end text-center text-lg-end">
           <p class="text-secondary-custom mb-0" style="max-width: 450px;">
             A holistic approach to reshaping corporate supply lines, maximizing savings, and boosting supplier accountability.
           </p>
@@ -330,6 +334,125 @@
     </div>
   </section>
 
+  <!-- Engagement Models Section -->
+  <section class="section-padding bg-secondary-section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center reveal-up mb-5">
+        <span class="section-subtitle">Flexible Partnerships</span>
+        <h2 class="section-title mx-auto text-center">Engagement Models</h2>
+        <p class="text-secondary-custom mx-auto" style="max-width: 600px;">Tailored consulting structures designed to integrate seamlessly with your internal teams and operational goals.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Model 1 -->
+        <div class="col-lg-4 col-md-6 reveal-up text-center">
+          <div class="card-premium p-4 p-md-5 h-100 d-flex flex-column" style="background-color: var(--bg-primary);">
+            <div class="mb-4">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 60px; height: 60px; background: rgba(20, 184, 166, 0.1); color: var(--accent-teal);">
+                <i class="fas fa-project-diagram fa-2x"></i>
+              </div>
+              <h3 class="h5 fw-bold" style="color: var(--text-primary);">Project-Based Advisory</h3>
+            </div>
+            <p class="text-secondary-custom small mb-4 flex-grow-1">Ideal for specific initiatives like a logistics network audit, vendor RFP management, or warehouse optimization over a set 3-6 month period.</p>
+            <ul class="list-unstyled text-start small mb-0 d-inline-block mx-auto">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Fixed scope and deliverables</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Dedicated milestone tracking</li>
+              <li><i class="fas fa-check text-success me-2"></i> Post-project ROI analysis</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Model 2 -->
+        <div class="col-lg-4 col-md-6 reveal-up text-center" style="transition-delay: 0.1s;">
+          <div class="card-premium p-4 p-md-5 h-100 d-flex flex-column position-relative" style="border: 2px solid var(--accent-teal); z-index: 1; overflow: visible !important;">
+            <div class="position-absolute top-0 start-50 translate-middle badge px-3 py-2 rounded-pill" style="background-color: var(--accent-teal); color: #fff;">Most Popular</div>
+            <div class="mb-4 mt-2">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 60px; height: 60px; background: rgba(59, 130, 246, 0.1); color: var(--accent-blue);">
+                <i class="fas fa-handshake fa-2x"></i>
+              </div>
+              <h3 class="h5 fw-bold" style="color: var(--text-primary);">Strategic Retainer</h3>
+            </div>
+            <p class="text-secondary-custom small mb-4 flex-grow-1">Ongoing executive advisory providing continuous oversight of your procurement strategy, category management, and supplier risk.</p>
+            <ul class="list-unstyled text-start small mb-0 d-inline-block mx-auto">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Guaranteed monthly hours</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Priority vendor dispute resolution</li>
+              <li><i class="fas fa-check text-success me-2"></i> Quarterly board-level reporting</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Model 3 -->
+        <div class="col-lg-4 col-md-6 reveal-up text-center" style="transition-delay: 0.2s;">
+          <div class="card-premium p-4 p-md-5 h-100 d-flex flex-column" style="background-color: var(--bg-primary);">
+            <div class="mb-4">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 60px; height: 60px; background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                <i class="fas fa-chart-line fa-2x"></i>
+              </div>
+              <h3 class="h5 fw-bold" style="color: var(--text-primary);">Performance-Based</h3>
+            </div>
+            <p class="text-secondary-custom small mb-4 flex-grow-1">A risk-free engagement model tied directly to measurable hard-dollar savings achieved in direct and indirect spend categories.</p>
+            <ul class="list-unstyled text-start small mb-0 d-inline-block mx-auto">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i> No upfront consulting fees</li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Shared savings percentage</li>
+              <li><i class="fas fa-check text-success me-2"></i> 12-month savings verification</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions -->
+  <section class="section-padding" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 reveal-up text-center text-lg-start">
+          <span class="section-subtitle">Clarifications</span>
+          <h2 class="section-title mx-auto mx-lg-0 text-center text-lg-start mb-4">Common Questions</h2>
+          <p class="text-secondary-custom mb-4 mx-auto mx-lg-0" style="max-width: 500px;">Have questions about how a fractional supply chain consultant integrates with your existing operations team? Here are answers to common inquiries.</p>
+          <a href="contact.html" class="btn btn-outline-primary px-4 py-2">Ask Another Question</a>
+        </div>
+        <div class="col-lg-7 reveal-up text-start">
+          <div class="accordion accordion-flush" id="faqAccordion">
+            <div class="accordion-item mb-3 border rounded shadow-sm" style="background-color: var(--bg-card); overflow: hidden;">
+              <h2 class="accordion-header" id="faqOne">
+                <button class="accordion-button collapsed fw-bold bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="color: var(--text-primary); box-shadow: none;">
+                  Do you work remotely or on-site?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary-custom small border-top border-secondary pt-3">
+                  The majority of strategic advisory and contract negotiation is conducted remotely. However, I highly recommend on-site facility audits and quarterly in-person strategic reviews for major retainer clients.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3 border rounded shadow-sm" style="background-color: var(--bg-card); overflow: hidden;">
+              <h2 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed fw-bold bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: var(--text-primary); box-shadow: none;">
+                  What is a typical ROI on your consulting services?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary-custom small border-top border-secondary pt-3">
+                  While every supply chain is different, clients typically see a 5x to 12x return on their consulting investment within the first 8 months through hard-dollar cost reductions and mitigated risk.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3 border rounded shadow-sm" style="background-color: var(--bg-card); overflow: hidden;">
+              <h2 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed fw-bold bg-transparent border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: var(--text-primary); box-shadow: none;">
+                  Do you replace our existing procurement team?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary-custom small border-top border-secondary pt-3">
+                  No. I operate as an executive extension of your existing team. I provide the high-level strategic frameworks, negotiation leverage, and analytics that your operational team can execute against.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 6: Diagnostic Call Booking -->
   <section id="diagnostic-booking" class="section-padding bg-secondary-section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
@@ -391,7 +514,7 @@
 
   <!-- Section 7: Final Premium CTA -->
   <section class="section-padding" style="background-color: var(--bg-primary);">
-    <div class="container reveal-up">
+    <div class="container reveal-up text-center text-lg-start">
       <div class="cta-premium-bg text-center position-relative">
         <h2 class="display-4 fw-bold mb-4" style="font-family: var(--font-heading); color: var(--text-primary);">
           Build A Smarter Supply Chain Today.
@@ -399,7 +522,7 @@
         <p class="text-secondary-custom mb-5 mx-auto" style="max-width: 600px; font-size: 1.1rem;">
           Schedule your introductory strategy call with Marcus Vance. Review vendor risk, cost reduction models, and spend data management.
         </p>
-        <div class="d-flex flex-sm-row flex-column justify-content-center gap-3 position-relative" style="z-index: 2;">
+        <div class="d-flex flex-sm-row flex-column justify-content-center gap-3 position-relative align-items-center" style="z-index: 2;">
           <a href="booking.html" class="btn btn-premium btn-premium-primary px-4 py-3">Schedule Consultation</a>
           <a href="contact.html" class="btn btn-premium btn-premium-secondary px-4 py-3">Inquire by Email</a>
         </div>

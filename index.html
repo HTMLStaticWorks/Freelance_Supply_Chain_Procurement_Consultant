@@ -31,7 +31,7 @@
 
   <!-- Premium Header -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
       <div class="container">
         <a class="navbar-brand navbar-brand-custom" href="index.html">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
@@ -43,14 +43,14 @@
           
         </a>
         
-        <div class="d-flex align-items-center d-lg-none">
+        <div class="d-flex align-items-center d-xl-none">
           <button class="theme-toggle-btn me-2" id="themeToggleMobile" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
           <button class="rtl-toggle-btn me-2" id="rtlToggleMobile" aria-label="Toggle RTL/LTR Direction">
             <i class="fas fa-right-left"></i>
           </button>
-          <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
             <i class="fas fa-bars fa-lg"></i>
           </button>
         </div>
@@ -72,7 +72,7 @@
           </ul>
         </div>
 
-        <div class="d-none d-lg-flex align-items-center">
+        <div class="d-none d-xl-flex align-items-center">
           <button class="theme-toggle-btn me-2" id="themeToggle" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
@@ -92,18 +92,22 @@
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-alternative.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Profile</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Info</a></li>
-      </ul>
+      <ul class="navbar-nav text-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item active" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-alternative.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
       <div class="mt-5">
         <a href="booking.html" class="btn btn-premium btn-premium-primary w-100 mb-3">BOOK NOW</a>
-        <a href="assets/Marcus_Vance_Profile.pdf" download class="btn btn-premium btn-premium-secondary w-100"><i class="fas fa-download me-2"></i>Download Profile</a>
       </div>
     </div>
   </div>
@@ -116,11 +120,11 @@
     </div>
     <div class="container hero-content-wrapper py-5">
       <div class="row align-items-center">
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-up text-center">
           <span class="section-subtitle">STRATEGIC SOURCE ADVISORY</span>
           <h1 class="display-3 fw-bold mb-4" style="line-height: 1.1;">Transform Procurement Into a <span class="text-gradient-blue">Competitive Advantage</span></h1>
           <p class="lead text-secondary-custom mb-5">I help manufacturing and retail businesses reduce procurement costs, optimize supplier performance, and build resilient supply chains through hands-on operational strategies.</p>
-          <div class="d-flex flex-sm-row flex-column gap-3">
+          <div class="d-flex flex-sm-row flex-column gap-3 justify-content-center align-items-center">
             <a href="booking.html" class="btn btn-premium btn-premium-primary px-4 py-3">BOOK NOW</a>
             <a href="gallery.html" class="btn btn-premium btn-premium-secondary px-4 py-3">View Case Studies</a>
           </div>
@@ -231,20 +235,117 @@
         <div class="col-lg-5 mb-5 mb-lg-0 reveal-up">
           <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600" alt="SupplyPro Consultant" class="img-fluid rounded-3 shadow-lg" style="object-fit: cover; width: 100%; max-height: 480px;">
         </div>
-        <div class="col-lg-7 ps-lg-5 reveal-up">
+        <div class="col-lg-7 ps-lg-5 reveal-up text-center">
           <span class="section-subtitle">Meet SupplyPro</span>
-          <h2 class="section-title mb-4">Helping Businesses Build Smarter Supply Chains</h2>
+          <h2 class="section-title mx-auto mb-4">Helping Businesses Build Smarter Supply Chains</h2>
           <p class="text-secondary-custom mb-4">With over 15 years of experience leading strategic sourcing and operations transformations, I counsel executive leadership on building resilient logistics networks that insulate corporate margins from global volatility.</p>
           <p class="text-secondary-custom mb-4">I operate as an embedded operational strategist rather than a detached corporate agency, directly auditing facilities, leading commercial negotiations, and proving results through transparent metrics.</p>
           
           <h4 class="h5 mb-3 text-gradient-blue fw-bold">Primary Target Industries:</h4>
-          <div class="row g-2 mb-5">
-            <div class="col-sm-6"><i class="fas fa-check text-accent-teal me-2" style="color: var(--accent-teal);"></i>Industrial Manufacturing</div>
-            <div class="col-sm-6"><i class="fas fa-check text-accent-teal me-2" style="color: var(--accent-teal);"></i>Enterprise Retail & E-commerce</div>
-            <div class="col-sm-6"><i class="fas fa-check text-accent-teal me-2" style="color: var(--accent-teal);"></i>FMCG & Food Processing</div>
-            <div class="col-sm-6"><i class="fas fa-check text-accent-teal me-2" style="color: var(--accent-teal);"></i>Distribution & 3PL logistics</div>
+          <div class="d-flex justify-content-center mb-5">
+            <div class="text-center">
+              <div class="d-flex align-items-center mb-2"><i class="fas fa-check me-2" style="color: var(--accent-teal);"></i>Industrial Manufacturing</div>
+              <div class="d-flex align-items-center mb-2"><i class="fas fa-check me-2" style="color: var(--accent-teal);"></i>Enterprise Retail &amp; E-commerce</div>
+              <div class="d-flex align-items-center mb-2"><i class="fas fa-check me-2" style="color: var(--accent-teal);"></i>FMCG &amp; Food Processing</div>
+              <div class="d-flex align-items-center"><i class="fas fa-check me-2" style="color: var(--accent-teal);"></i>Distribution &amp; 3PL logistics</div>
+            </div>
           </div>
-          <a href="about.html" class="btn btn-premium btn-premium-primary">View Consultant Biography</a>
+          <div class="d-flex justify-content-center">
+            <a href="about.html" class="btn btn-premium btn-premium-primary">View Consultant Biography</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials Section -->
+  <section class="section-padding bg-secondary-section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center reveal-up mb-5">
+        <span class="section-subtitle">Client Success</span>
+        <h2 class="section-title mx-auto">Trusted by Industry Leaders</h2>
+        <p class="text-secondary-custom mx-auto" style="max-width: 600px;">Hear from supply chain executives who have transformed their procurement operations through our strategic advisory.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 reveal-up text-center">
+          <div class="card-premium p-4 p-md-5 h-100 d-flex flex-column">
+            <div class="d-flex text-warning mb-3 justify-content-center">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="fst-italic text-secondary-custom mb-4">"Marcus was instrumental in completely restructuring our vendor agreements. We saw a 14% reduction in direct material costs within the first two quarters of implementation."</p>
+            <div class="d-flex align-items-center justify-content-center mt-auto">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=150" alt="Client" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+              <div class="text-center">
+                <h6 class="mb-0 fw-bold">David Chen</h6>
+                <small class="text-secondary-custom">VP of Supply Chain, IndustrialTech</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 reveal-up text-center" style="transition-delay: 0.1s;">
+          <div class="card-premium p-4 p-md-5 h-100 d-flex flex-column">
+            <div class="d-flex text-warning mb-3 justify-content-center">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="fst-italic text-secondary-custom mb-4">"The logistics audit provided unparalleled visibility into our 3PL inefficiencies. The recommended carrier diversification strategy saved us millions during the peak season."</p>
+            <div class="d-flex align-items-center justify-content-center mt-auto">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" alt="Client" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+              <div class="text-center">
+                <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+                <small class="text-secondary-custom">Director of Operations, GlobalRetail</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Insights Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 reveal-up text-center">
+        <div class="mb-4 mb-md-0">
+          <span class="section-subtitle">Procurement Insights</span>
+          <h2 class="section-title mx-auto mb-0">Latest Sourcing Strategies</h2>
+        </div>
+        <div>
+          <a href="blog.html" class="btn btn-outline-primary d-inline-flex align-items-center justify-content-center">View All Articles <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal-up text-center">
+          <div class="card border-0 h-100 shadow-sm" style="border-radius: 8px; overflow: hidden; background-color: var(--bg-card);">
+            <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Logistics" style="height: 200px; object-fit: cover;">
+            <div class="card-body p-4 text-center">
+              <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Logistics</span>
+              <h5 class="card-title fw-bold h6 mb-3" style="color: var(--text-primary);">Mitigating Risk in Global Shipping Lanes</h5>
+              <p class="card-text text-secondary-custom small mb-4">Discover how diversifying your carrier mix can insulate your supply chain from regional disruptions.</p>
+              <a href="blog-details.html" class="text-decoration-none fw-bold small" style="color: var(--accent-blue);">Read Article <i class="fas fa-chevron-right ms-1" style="font-size: 0.8em;"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal-up text-center" style="transition-delay: 0.1s;">
+          <div class="card border-0 h-100 shadow-sm" style="border-radius: 8px; overflow: hidden; background-color: var(--bg-card);">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Cost Reduction" style="height: 200px; object-fit: cover;">
+            <div class="card-body p-4 text-center">
+              <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Cost Reduction</span>
+              <h5 class="card-title fw-bold h6 mb-3" style="color: var(--text-primary);">Renegotiating Vendor SLAs Effectively</h5>
+              <p class="card-text text-secondary-custom small mb-4">A practical guide to approaching legacy suppliers and auditing existing contracts for hidden savings.</p>
+              <a href="blog-details.html" class="text-decoration-none fw-bold small" style="color: var(--accent-blue);">Read Article <i class="fas fa-chevron-right ms-1" style="font-size: 0.8em;"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal-up text-center" style="transition-delay: 0.2s;">
+          <div class="card border-0 h-100 shadow-sm" style="border-radius: 8px; overflow: hidden; background-color: var(--bg-card);">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Analytics" style="height: 200px; object-fit: cover;">
+            <div class="card-body p-4 text-center">
+              <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Analytics</span>
+              <h5 class="card-title fw-bold h6 mb-3" style="color: var(--text-primary);">Implementing Predictive Inventory Models</h5>
+              <p class="card-text text-secondary-custom small mb-4">Leveraging historical data and AI tools to prevent stockouts while reducing overall holding costs.</p>
+              <a href="blog-details.html" class="text-decoration-none fw-bold small" style="color: var(--accent-blue);">Read Article <i class="fas fa-chevron-right ms-1" style="font-size: 0.8em;"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -314,7 +415,7 @@
       </div>
       <hr class="border-secondary mb-4">
       <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <div class="col-md-6 text-center mb-3 mb-md-0">
           <span style="font-size: 0.85rem;" class="text-secondary-custom">&copy; 2026 SupplyPro. All rights reserved.</span>
         </div>
         <div class="col-md-6 text-center text-md-end">

@@ -31,7 +31,7 @@
 
   <!-- Premium Header -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
       <div class="container">
         <a class="navbar-brand navbar-brand-custom" href="index.html">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
@@ -43,14 +43,14 @@
           
         </a>
         
-        <div class="d-flex align-items-center d-lg-none">
+        <div class="d-flex align-items-center d-xl-none">
           <button class="theme-toggle-btn me-2" id="themeToggleMobile" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
           <button class="rtl-toggle-btn me-2" id="rtlToggleMobile" aria-label="Toggle RTL/LTR Direction">
             <i class="fas fa-right-left"></i>
           </button>
-          <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
             <i class="fas fa-bars fa-lg"></i>
           </button>
         </div>
@@ -72,7 +72,7 @@
           </ul>
         </div>
 
-        <div class="d-none d-lg-flex align-items-center">
+        <div class="d-none d-xl-flex align-items-center">
           <button class="theme-toggle-btn me-2" id="themeToggle" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
@@ -92,18 +92,22 @@
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-alternative.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="about.html">About Profile</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Info</a></li>
-      </ul>
+      <ul class="navbar-nav text-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-alternative.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
       <div class="mt-5">
         <a href="booking.html" class="btn btn-premium btn-premium-primary w-100 mb-3">BOOK NOW</a>
-        <a href="assets/Marcus_Vance_Profile.pdf" download class="btn btn-premium btn-premium-secondary w-100"><i class="fas fa-download me-2"></i>Download Profile</a>
       </div>
     </div>
   </div>
@@ -113,7 +117,7 @@
     <div class="container reveal-up position-relative z-1 text-center">
       <span class="section-subtitle">Biography & Credentials</span>
       <h1 class="display-4 fw-bold text-white">SupplyPro, CSCP</h1>
-      <p class="text-secondary-custom lead mb-0">Independent Sourcing Consultant & Operational Risk Auditor</p>
+      <p class="text-light lead mb-0" style="opacity: 0.9;">Independent Sourcing Consultant & Operational Risk Auditor</p>
     </div>
   </section>
 
@@ -134,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-7 ps-lg-5 reveal-up">
+        <div class="col-lg-7 ps-lg-5 reveal-up text-center text-lg-start">
           <span class="section-subtitle">Consultant Profile</span>
           <h2 class="section-title mb-4">Experience</h2>
           <p class="text-secondary-custom mb-4">I began my career in the manufacturing hubs of East Asia and North America, working within the logistics infrastructure of Fortune 500 electronics and retail companies. Over 15 years, I observed a consistent issue: businesses frequently overpay for procurement contracts due to structured information asymmetries and outdated negotiation frameworks.</p>
@@ -144,7 +148,7 @@
           
 
           
-          <div class="d-flex flex-sm-row flex-column gap-3">
+          <div class="d-flex flex-sm-row flex-column gap-3 justify-content-center justify-content-lg-start align-items-center">
             <a href="booking.html" class="btn btn-premium btn-premium-primary">Schedule Sourcing Audit</a>
             <a href="contact.html" class="btn btn-premium btn-premium-secondary">Review Sourcing Frameworks</a>
           </div>

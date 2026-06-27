@@ -90,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 .text-gradient-blue {
   background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-teal) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -319,7 +320,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(37, 99, 235, 0.05);
 }
 
-.card-premium:hover .card-icon {
+.card-premium:not(.contact-channels-card):hover .card-icon,
+.contact-channels-card .card-icon:hover {
   background-color: var(--accent-blue);
   color: #FFFFFF;
 }
@@ -480,8 +482,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4px 12px;
   font-size: 0.75rem;
   font-weight: 700;
-  background-color: rgba(20, 184, 166, 0.1);
-  color: var(--accent-teal);
+  background-color: var(--accent-teal);
+  color: #ffffff;
   border-radius: 4px;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -590,7 +592,7 @@ h1, h2, h3, h4, h5, h6 {
 .calendar-cell.muted {
   color: var(--text-muted);
   pointer-events: none;
-  opacity: 0.25;
+  opacity: 0.45;
 }
 
 .calendar-cell.available {
@@ -667,14 +669,17 @@ h1, h2, h3, h4, h5, h6 {
     left: 20px;
   }
   .timeline-item .timeline-content {
-    width: calc(100% - 60px);
+    width: calc(100% - 75px);
+    margin-left: 75px;
   }
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
-    float: right;
+    float: none;
   }
   .timeline-badge {
     left: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .stat-box {
     border-right: none;
@@ -1151,3 +1156,65 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Mobile Offcanvas Menu text centering */
+.offcanvas-body .navbar-nav .nav-link,
+.offcanvas-body .navbar-nav .dropdown-item {
+  text-align: center !important;
+}
+
+/* Navbar Toggler Theme Color */
+.navbar-toggler {
+  color: var(--text-primary) !important;
+}
+
+
+
+/* Accordion Icon Dark Mode Support */
+.accordion-button::after {
+  filter: invert(1) brightness(2);
+}
+
+[data-theme="light"] .accordion-button::after {
+  filter: none;
+}
+
+
+/* RTL Dropdown Alignment Fix */
+.floating-label-group select {
+  padding-right: 30px;
+}
+[dir="rtl"] .floating-label-group select {
+  padding-right: 4px;
+  padding-left: 30px;
+  background-position: left 0.5rem center;
+}
+
+
+/* Comprehensive RTL Fix for Floating Labels */
+[dir="rtl"] .floating-label-group label {
+  left: auto !important;
+  right: 4px !important;
+}
+[dir="rtl"] .floating-label-group input,
+[dir="rtl"] .floating-label-group select,
+[dir="rtl"] .floating-label-group textarea {
+  text-align: right !important;
+}
+[dir="rtl"] .floating-label-group select {
+  padding-left: 30px !important;
+  padding-right: 4px !important;
+}
+
+
+/* Fix Floating Cards Overlapping on Tablets (1024px) */
+@media (max-width: 1199.98px) {
+  .floating-card-1 {
+    left: 2%;
+  }
+  .floating-card-2 {
+    right: 2%;
+  }
+  .floating-card-3 {
+    left: 4%;
+  }
+}

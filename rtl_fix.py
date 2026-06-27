@@ -1,0 +1,10 @@
+with open('assets/css/style.css', 'a', encoding='utf-8') as f:
+    f.write('\n\n/* RTL Dropdown Alignment Fix */\n')
+    f.write('.floating-label-group select {\n')
+    f.write('  padding-right: 30px;\n')
+    f.write('}\n')
+    f.write('[dir="rtl"] .floating-label-group select {\n')
+    f.write('  padding-right: 4px;\n')
+    f.write('  padding-left: 30px;\n')
+    f.write('  background-position: left 0.5rem center;\n')
+    f.write('}\n')

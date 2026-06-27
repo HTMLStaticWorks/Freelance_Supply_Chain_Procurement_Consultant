@@ -1,0 +1,13 @@
+with open('assets/css/style.css', 'a', encoding='utf-8') as f:
+    f.write('\n\n/* Fix Floating Cards Overlapping on Tablets (1024px) */\n')
+    f.write('@media (max-width: 1199.98px) {\n')
+    f.write('  .floating-card-1 {\n')
+    f.write('    left: 2%;\n')
+    f.write('  }\n')
+    f.write('  .floating-card-2 {\n')
+    f.write('    right: 2%;\n')
+    f.write('  }\n')
+    f.write('  .floating-card-3 {\n')
+    f.write('    left: 4%;\n')
+    f.write('  }\n')
+    f.write('}\n')

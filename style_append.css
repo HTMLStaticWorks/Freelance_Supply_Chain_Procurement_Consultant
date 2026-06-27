@@ -1,0 +1,20 @@
+
+@media (max-width: 991px) {
+  /* Center all typical text columns and headers on mobile/tablet */
+  .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-12, .col-md-8, .container.reveal-up {
+    text-align: center;
+  }
+  
+  /* Reset inner cards or lists that should remain left-aligned */
+  .card-premium, .floating-card, .list-unstyled, .text-start {
+    text-align: left;
+  }
+  
+  /* Center standard d-flex button wrappers on mobile/tablet */
+  .d-flex.flex-sm-row.flex-column.gap-3,
+  .d-flex.gap-3:not(.card-premium .d-flex) {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+

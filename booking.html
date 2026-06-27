@@ -31,7 +31,7 @@
 
   <!-- Premium Header -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
       <div class="container">
         <a class="navbar-brand navbar-brand-custom" href="index.html">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 d-inline-block align-text-top" style="vertical-align: middle;">
@@ -43,14 +43,14 @@
           
         </a>
         
-        <div class="d-flex align-items-center d-lg-none">
+        <div class="d-flex align-items-center d-xl-none">
           <button class="theme-toggle-btn me-2" id="themeToggleMobile" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
           <button class="rtl-toggle-btn me-2" id="rtlToggleMobile" aria-label="Toggle RTL/LTR Direction">
             <i class="fas fa-right-left"></i>
           </button>
-          <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
             <i class="fas fa-bars fa-lg"></i>
           </button>
         </div>
@@ -72,7 +72,7 @@
           </ul>
         </div>
 
-        <div class="d-none d-lg-flex align-items-center">
+        <div class="d-none d-xl-flex align-items-center">
           <button class="theme-toggle-btn me-2" id="themeToggle" aria-label="Toggle Light/Dark Theme">
             <i class="fas fa-sun"></i>
           </button>
@@ -92,25 +92,29 @@
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-alternative.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Profile</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact Info</a></li>
-      </ul>
+      <ul class="navbar-nav text-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-alternative.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Insights</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="gallery.html">Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
       <div class="mt-5">
         <a href="booking.html" class="btn btn-premium btn-premium-primary w-100 mb-3">BOOK NOW</a>
-        <a href="assets/Marcus_Vance_Profile.pdf" download class="btn btn-premium btn-premium-secondary w-100"><i class="fas fa-download me-2"></i>Download Profile</a>
       </div>
     </div>
   </div>
 
   <!-- Inner Page Banner -->
   <section class="section-padding position-relative overflow-hidden d-flex align-items-center" style="background-color: var(--bg-secondary); padding-top: 160px; padding-bottom: 80px; border-bottom: 1px solid var(--border-color);">
-    <div class="container reveal-up">
+    <div class="container reveal-up text-center">
       <span class="section-subtitle">Advisory Schedule</span>
       <h1 class="display-4 fw-bold">Schedule Sourcing Diagnostics</h1>
       <p class="text-secondary-custom lead mb-0">Select a weekday slot below to review your supply chain challenge, sourcing rates, and cost reduction models.</p>
@@ -120,11 +124,11 @@
   <!-- Interactive Calendar and Intake Form -->
   <section class="section-padding">
     <div class="container">
-      <div class="row g-5 align-items-start">
+      <div class="row g-5">
         
         <!-- Left Side: Interactive Calendar -->
-        <div class="col-lg-6 reveal-up">
-          <h4 class="h5 mb-4 text-gradient-blue fw-bold"><i class="far fa-calendar-alt me-2"></i>Select Available Date & Time</h4>
+        <div class="col-lg-6 reveal-up text-center d-flex flex-column">
+          <h4 class="h5 mb-4 text-gradient-blue fw-bold text-center"><i class="far fa-calendar-alt me-2"></i>Select Available Date & Time</h4>
           
           <div class="calendar-widget mb-4">
             <div class="calendar-header">
@@ -156,14 +160,14 @@
           </div>
 
           <!-- Image Visual (Unrepeated) -->
-          <div class="mt-5">
+          <div class="mt-auto pt-4">
             <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=600" alt="Consultant whiteboard meeting notes" class="img-fluid rounded border border-secondary shadow-sm" style="width: 100%; max-height: 250px; object-fit: cover;">
           </div>
         </div>
 
         <!-- Right Side: Intake Sourcing Details -->
-        <div class="col-lg-6 reveal-up">
-          <h4 class="h5 mb-4 text-gradient-blue fw-bold"><i class="fas fa-file-invoice-dollar me-2"></i>Intake Sourcing Profile</h4>
+        <div class="col-lg-6 reveal-up text-center">
+          <h4 class="h5 mb-4 text-gradient-blue fw-bold text-center"><i class="fas fa-file-invoice-dollar me-2"></i>Intake Sourcing Profile</h4>
           
           <form class="needs-validation-custom" novalidate>
             <!-- Calendar values map here -->
