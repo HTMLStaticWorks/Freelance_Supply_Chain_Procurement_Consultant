@@ -1218,3 +1218,48 @@ h1, h2, h3, h4, h5, h6 {
     left: 4%;
   }
 }
+
+/* Fix offcanvas mobile menu dropdown overlapping */
+.offcanvas .dropdown-menu {
+  position: static !important;
+  transform: none !important;
+  float: none;
+  box-shadow: none;
+  background-color: transparent !important;
+  border: none;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Ensure flexible partnership cards are the same size */
+.row .col-lg-4 .card-premium.h-100 {
+  transform: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.row .col-lg-4 .card-premium.h-100:hover {
+  transform: translateY(-8px) !important;
+}
+
+/* Hover effects for Read Article links */
+.article-read-more {
+  color: var(--accent-blue) !important;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+}
+.article-read-more:hover {
+  color: var(--accent-teal) !important;
+}
+.article-read-more i {
+  transition: transform 0.3s ease;
+}
+.article-read-more:hover i {
+  transform: translateX(4px);
+}
+
+/* Ensure select options have proper contrast in dark/light modes */
+select option {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}

@@ -15,6 +15,27 @@
   .d-flex.gap-3:not(.card-premium .d-flex) {
     justify-content: center !important;
     align-items: center !important;
-  }
+    }
 }
 
+/* Ensure flexible partnership cards are the same size */
+.row .col-lg-4 .card-premium.h-100 {
+  transform: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.row .col-lg-4 .card-premium.h-100:hover {
+  transform: translateY(-8px) !important;
+}
+  /* Fix offcanvas mobile menu dropdown overlapping */
+  .offcanvas .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    float: none;
+    box-shadow: none;
+    background-color: transparent !important;
+    border: none;
+    text-align: center;
+    margin-top: 0;
+  }
+}
