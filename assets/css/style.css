@@ -56,12 +56,16 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
   transition: background-color 0.5s ease, color 0.5s ease;
-  overflow-x: hidden;
   line-height: 1.6;
 }
 
@@ -1229,6 +1233,16 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   text-align: center;
   margin-top: 0;
+}
+.offcanvas .dropdown-item {
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .offcanvas .dropdown-item {
+  color: #0F172A !important;
+}
+.offcanvas .dropdown-item:hover, .offcanvas .dropdown-item:focus {
+  color: var(--accent-blue) !important;
+  background-color: transparent !important;
 }
 
 /* Ensure flexible partnership cards are the same size */

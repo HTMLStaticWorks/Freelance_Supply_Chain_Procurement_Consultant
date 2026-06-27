@@ -27,7 +27,7 @@
 .row .col-lg-4 .card-premium.h-100:hover {
   transform: translateY(-8px) !important;
 }
-  /* Fix offcanvas mobile menu dropdown overlapping */
+  /* Fix offcanvas mobile menu dropdown overlapping and visibility */
   .offcanvas .dropdown-menu {
     position: static !important;
     transform: none !important;
@@ -38,4 +38,13 @@
     text-align: center;
     margin-top: 0;
   }
-}
+  .offcanvas .dropdown-item {
+    color: var(--text-primary) !important;
+  }
+  [data-theme="light"] .offcanvas .dropdown-item {
+    color: #0F172A !important;
+  }
+  .offcanvas .dropdown-item:hover, .offcanvas .dropdown-item:focus {
+    color: var(--accent-blue) !important;
+    background-color: transparent !important;
+  }
